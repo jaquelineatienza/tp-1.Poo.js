@@ -7,6 +7,7 @@ String.prototype.concatenarPalabra = function (palabra) {
 const resultado = string.concatenarPalabra("mundo");
 console.log(resultado);
 
+// Punto 4
 const originalTexto = String.prototype.toUpperCase;
 
 String.prototype.toUpperCase = function () {
