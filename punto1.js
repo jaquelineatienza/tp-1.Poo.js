@@ -8,7 +8,7 @@ CuentaBancaria.prototype.depositar = function (cantidad) {
 };
 CuentaBancaria.prototype.extraer = function (cantidad) {
   if (cantidad > this.saldoInicial) {
-    console.log("Fondos insuficientes");
+    return console.log("Fondos insuficientes");
   }
   this.saldoInicial = this.saldoInicial - cantidad;
 };
