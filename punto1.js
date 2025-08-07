@@ -19,5 +19,5 @@ CuentaBancaria.prototype.consultarSaldo = function () {
 const nuevoCliente = new CuentaBancaria("jose", 4000);
 nuevoCliente.depositar(1000);
 console.log(nuevoCliente.consultarSaldo());
-nuevoCliente.extraer(300);
+nuevoCliente.extraer(30000);
 console.log(nuevoCliente.consultarSaldo());

@@ -17,9 +17,9 @@ class CuentaBancaria {
 
   set extraerSaldo(monto) {
     if (monto > this.#saldoInicial) {
-      return "Fondos insuficientes";
+      return console.log("Fondos insuficientes");
     }
-    this.#saldoInicial = this.#saldoInicial - monto;
+    return (this.#saldoInicial = this.#saldoInicial - monto);
   }
 }
 
