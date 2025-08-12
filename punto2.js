@@ -12,6 +12,9 @@ class CuentaBancaria {
   set ingresarSaldo(monto) {
     if (monto >= 0) {
       this.#saldoInicial += monto;
+    } else {
+      console.log("el saldo no puede ser negativo");
+      return;
     }
   }
 
@@ -19,13 +22,13 @@ class CuentaBancaria {
     if (monto > this.#saldoInicial) {
       return console.log("Fondos insuficientes");
     }
-    return (this.#saldoInicial = this.#saldoInicial - monto);
+    this.#saldoInicial = this.#saldoInicial - monto;
   }
 }
 
 const newClient = new CuentaBancaria("juan", 7000);
 console.log(newClient.saldo);
-newClient.ingresarSaldo = 3000;
+newClient.ingresarSaldo = -3000;
 console.log(newClient.saldo);
 newClient.extraerSaldo = 4000;
 console.log(newClient.saldo);
